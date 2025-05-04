@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicativo de Clima</title>
+
+    <!-- Importando a fonte de ícones -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Seção de Pesquisa -->
+        <div class="secao-pesquisa">
+            <div class="input-wrapper">
+                <span class="material-symbols-rounded">search</span>
+                <input type="search" placeholder="Insira uma cidade." class="input-pesquisa">
+            </div>
+            <button class="local-botao">
+                <span class="material-symbols-rounded">my_location</span>
+            </button>
+        </div>
+
+        <!-- Mensagem de erro -->
+        <div class="resultado-erro">
+            <img src="icons/no-result.svg" class="icone-clima">
+            <h3 class="title">Algo deu errado!</h3>
+            <p class="message">Fomos incapazes de mostrar os detalhes do clima. Certifiqui-se de que inseriu uma cidade válida ou tente novamente mais tarde.</p>
+        </div>
+
+        <!-- Seção de Clima -->
+        <div class="secao-clima">
+            <div class="clima-atual">
+                <img src="icons/clouds.svg" class="icone-clima">
+                <h2 class="temperatura">00<span>&deg;C</span></h2>
+                <p class="descricao">Descrição do clima</p>
+            </div>
+
+            <!-- Seção do Clima por hora -->
+            <div class="hora-clima">
+                <ul class="lista-clima"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src = "script.js"></script>
+</body>
+</html>

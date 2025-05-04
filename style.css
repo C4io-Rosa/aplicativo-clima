@@ -1,0 +1,188 @@
+/* Importação do estilo de fonte Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #5f41e4;
+}
+
+.container {
+    background: #fff;
+    border-radius: 10px;
+    max-width: 425px;
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.secao-pesquisa {
+    display: flex;
+    padding: 25px;
+    gap: 10px;
+    align-items: center;
+}
+
+.secao-pesquisa .input-wrapper {
+    height: 54px;
+    width: 100%;
+    position: relative;
+}
+
+.secao-pesquisa .input-wrapper span {
+    position: absolute;
+    top: 50%;
+    left: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+.secao-pesquisa .input-pesquisa {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0 20px 0 50px;
+    border-radius: 6px;
+    border: 1px solid #beb0ff;
+}
+
+.secao-pesquisa .input-pesquisa:focus {
+    border-color: #5f41e4;
+    transition: 0.1s ease;
+}
+
+.secao-pesquisa .input-pesquisa::placeholder {
+    text-transform: none;
+}
+
+.secao-pesquisa .local-botao {
+    height: 54px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    outline: none;
+    cursor: pointer;
+    color: #5f41e4;
+    background: #fff;
+    border-radius: 6px;
+    border: 1px solid #beb0ff;
+    transition: 0.3s ease;
+}
+
+.secao-pesquisa .local-botao:hover {
+    color: #fff;
+    background: #5f41e4;
+    border-color: #5f41e4;
+}
+
+.secao-pesquisa .local-botao span {
+    font-size: 1.3rem;
+}
+
+.resultado-erro {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+}
+
+body.exibir-resultado-erro .resultado-erro {
+    display: flex;
+}
+
+.resultado-erro .title {
+    margin: 25px 0 15px;
+}
+
+.resultado-erro .message {
+    font-weight: 500;
+}
+
+body.exibir-resultado-erro .secao-clima {
+    visibility: hidden;
+}
+
+.secao-clima .clima-atual {
+    display: flex;
+    align-items: center;
+    padding: 20px 0 50px;
+    flex-direction: column;
+}
+
+.clima-atual .icone-clima {
+    width: 140px;
+    aspect-ratio: 1;
+}
+
+.clima-atual .temperatura {
+    font-size: 3.38rem;
+    margin: 23px 0;
+    display: flex;
+}
+
+.clima-atual .temperatura span {
+    font-size: 1.56rem;
+    font-weight: 500;
+    margin: 5px 0 0 2px;
+}
+
+.clima-atual .descricao {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.hora-clima {
+    padding: 16px 25px;
+    border-top: 1px solid #d5ccff;
+}
+
+.hora-clima .lista-clima {
+    display: flex;
+    list-style: none;
+    gap: 38px;
+    padding-bottom: 16px;
+    margin-bottom: -16px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.hora-clima:hover .lista-clima  {
+    scrollbar-color: #bfbfbf transparent;
+}
+
+.hora-clima .clima-item {
+    display: flex;
+    gap: 7px;
+    font-weight: 500;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hora-clima .clima-item .icone-clima {
+    width: 28px;
+    aspect-ratio: 1;
+}

@@ -1,8 +1,10 @@
+// Referenciando HTML com querySelector
 const pesquisaInput = document.querySelector(".input-pesquisa");
 const botaoLocalizacao = document.querySelector(".local-botao");
 const divClimaAtual = document.querySelector(".clima-atual");
 const divClimaporHora = document.querySelector(".hora-clima");
 
+// Chace disponibilizada pela API
 const API_KEY = "76d4a373c13544ccb90181812252804";
 
 // Códigos da API para cada tipo de clima
@@ -21,7 +23,7 @@ const exibirPrevisaoPorHora = (dadosPorHora) => {
     const horaAtual = new Date().setMinutes(0, 0, 0);
     const prox24Horas = horaAtual + 24 * 60 * 60 * 1000;
 
-    // Filtrar a hora para incluir somente as próximas 24 horas
+    // Filtrar para incluir somente as próximas 24 horas
     const prox24HorasDados = dadosPorHora.filter(({ time }) => {
         const previsaoHora = new Date(time).getTime();
         return previsaoHora >= horaAtual && previsaoHora <= prox24Horas;

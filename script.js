@@ -99,6 +99,6 @@ botaoLocalizacao.addEventListener("click", () => {
         const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${latitude},${longitude}&days=2`;
         buscarInfoClima(API_URL);
     }, error => {
-        alert("Habilite a opção de localização no seu navegador.");
+        alert("Erro! Habilite a opção de localização no seu navegador ou tente novamente mais tarde.");
     })
 });
